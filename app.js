@@ -17,7 +17,7 @@ function navCheck(entries) {
     entries.forEach(entry => {
         const className = entry.target.className;
         const activeAnchor = document.querySelector(`[data-page=${className}]`);
-        const gradientIndex = entry.target.getAttribute(`data-index`);
+        const gradientIndex = parseInt(entry.target.getAttribute(`data-index`));
         const coords = activeAnchor.getBoundingClientRect();
         const directions = {
             height: coords.height,
